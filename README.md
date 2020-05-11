@@ -97,3 +97,14 @@ Types of logging context:
 - API logging - logging each request
 - Service logging - logging of different service calls
 - Global logging - logging not bound to a server request. Logs actions like server bootstrap
+
+## Resources helping explain different bits
+- [Avoid Nesting when you're Testing](https://kentcdodds.com/blog/avoid-nesting-when-youre-testing) - avoidance of nested describes, overuse of beforeEach/afterEach
+- [The Twelve-Factor App](https://12factor.net)
+- [Youtube] [Functional architecture - The pits of success - Mark Seemann](https://www.youtube.com/watch?v=US8QG9I1XW0)
+    - Benefits of pure functions: easy to reason about, easy to manipulate, easy to compose, easy to test
+    - shows examples in Haskel on how to compose and split into layers, gives examples on how well defined data models can have their behavior extracted and function isolation (dependency injection)
+- [Youtube] [Do not walk away from Complexity, Run - Venkat Subramaniam](https://www.youtube.com/watch?v=nZcLHkORdHE) - the topic of the talk is about what makes a software complex. He gives examples with Uncontrollable mutability, Excessive dependencies, Lack of reversibility - The ability to back out of design/architectural decisions
+- [Youtube] [Refactoring to Immutability - Kevlin Henney](https://www.youtube.com/watch?v=APUCMSPiNh4) - builds a case for immutability (understandable code by minimizing moving parts, Idempotence, ...); A comparison between declarative (functional in general) and imperative (oop in general) style and that languages & libraries are typically optimised for only one of these styles; Briefs about tight coupling and how make code immutable; How to remove code noise (Extract iteration, extract control flow as Higher-Order Functions, Replace control flow with data structure, Replace control flow with data flow, Replace loop with stream filtering)
+- [How to add testing to an existing project](https://kentcdodds.com/blog/how-to-add-testing-to-an-existing-project) - brief on the concept of testing trophy - fancy term to describe code formatters, static code analysis(linters) and types as the most basic type of testing
+- [Eliminate an entire category of bugs with a few simple tools](https://kentcdodds.com/blog/eliminate-an-entire-category-of-bugs-with-a-few-simple-tools) - extends the "How to add testing to an existing project" article with tooling and practices
